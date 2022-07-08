@@ -9,9 +9,18 @@ import { TableDataService } from './table-data.service';
 import { MatTableModule } from '@angular/material/table';
 import { TableDemoComponent } from './table-demo/table-demo.component';
 import { FormDetailsComponent } from './form-details/form-details.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, MatButtonModule, MatTableModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    MatButtonModule,
+    MatTableModule,
+    MatSliderModule,
+  ],
   declarations: [
     AppComponent,
     HelloComponent,
