@@ -1,14 +1,25 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { MatButtonModule } from '@angular/material/button';
+import { TableDataService } from './table-data.service';
+import { MatTableModule } from '@angular/material/table';
+import { TableDemoComponent } from './table-demo/table-demo.component';
+import { FormDetailsComponent } from './form-details/form-details.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, MatButtonModule],
-  declarations: [AppComponent, HelloComponent],
+  imports: [BrowserModule, FormsModule, MatButtonModule, MatTableModule],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    TableDemoComponent,
+    FormDetailsComponent,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [TableDataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
