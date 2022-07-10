@@ -11,6 +11,10 @@ import { TableDemoComponent } from './table-demo/table-demo.component';
 import { FormDetailsComponent } from './form-details/form-details.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSortModule } from '@angular/material/sort';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -20,6 +24,10 @@ import { MatSliderModule } from '@angular/material/slider';
     MatButtonModule,
     MatTableModule,
     MatSliderModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSortModule,
+    ReactiveFormsModule,
   ],
   declarations: [
     AppComponent,
