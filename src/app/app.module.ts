@@ -12,9 +12,12 @@ import { FormDetailsComponent } from './form-details/form-details.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
 import { MatSortModule } from '@angular/material/sort';
 import { ReactiveFormsModule } from '@angular/forms';
+import {
+  ErrorStateMatcher,
+  ShowOnDirtyErrorStateMatcher,
+} from '@angular/material/core';
 
 @NgModule({
   imports: [
@@ -25,7 +28,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatTableModule,
     MatSliderModule,
     MatInputModule,
-    MatButtonModule,
     MatSortModule,
     ReactiveFormsModule,
   ],
@@ -36,7 +38,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormDetailsComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [TableDataService],
+  providers: [
+    TableDataService,
+    { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
